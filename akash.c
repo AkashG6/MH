@@ -15,7 +15,7 @@ int main()
 		scanf("%d",&array[i]);
 	}
 
-	array[n] = *ones_complement(array,n);
+	array[n] = *twos_complement(array,n);
 
 	for (i = 0; i < n; i++)
 	{
