@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include"bin.h"
+
+int main()
+{
+	int n, i, ans;
+	
+	printf("Enter the size of the array: ");
+	scanf("%d",&n);
+	
+	int a[n];
+	
+	printf("Enter the elements: \n");
+	
+	for(i= 0; i< n; i++)
+	scanf("%d",&a[i]);
+	
+	ans= bin_to_dec(a, n);
+	
+	printf("Decimal equivalent: %d",ans);
+}
