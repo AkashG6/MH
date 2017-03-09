@@ -17,6 +17,7 @@ int main()
 
 	// a[n] = *ones_complement(a,array,n);
 
+
 	// for (i = 0; i < n; i++)
 	// {
 	// 	printf("%d",a[i]);
@@ -27,6 +28,9 @@ int main()
 	// {
 	// 	printf("%d",array[i]);
 	// }
+
+	//array[n] = *twos_complement(array,n);
+
 
 															// dec to bin
 

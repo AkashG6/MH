@@ -87,3 +87,29 @@ int * dec_to_bin(int array[],int nb,int n)
 	return array;
 }
 
+
+int * twos_complement(int arr[], int n)
+{
+	//2's complement of arr
+	int flag= 0, j;
+	for(j= n- 1; j>= 0; j--)
+	{
+		if(arr[j] > 1 || arr[j]< 0)
+		{
+			printf("Error: invalid binary number passed to function twos_complement())\n"); //the function will throw an error if the binary number is invalid.
+			exit(0);
+		}    
+		
+		if(flag == 0)
+		{
+			if(arr[j] == 1)
+				flag= 1;
+		}
+				
+		else
+		arr[j]= (arr[j]+1)%2;		
+	}
+	
+	return (arr);
+}
+
