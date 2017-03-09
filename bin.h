@@ -88,7 +88,7 @@ int * dec_to_bin(int array[],int nb,int n)
 }
 
 
-int * twos_complement(int arr[], int n)
+int * twos_complement(int a[], int arr[], int n)
 {
 	//2's complement of arr
 	int flag= 0, j;
@@ -103,13 +103,15 @@ int * twos_complement(int arr[], int n)
 		if(flag == 0)
 		{
 			if(arr[j] == 1)
-				flag= 1;
+			flag= 1;
+			
+			a[j]= arr[j];
 		}
 				
 		else
-		arr[j]= (arr[j]+1)%2;		
+		a[j]= (arr[j]+1)%2;		
 	}
 	
-	return (arr);
+	return (a);
 }
 

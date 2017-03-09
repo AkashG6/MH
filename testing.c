@@ -8,14 +8,17 @@ int main()
 	printf("Enter the size of the array: ");
 	scanf("%d",&n);
 	
-	int a[n];
+	int a[n], arr[n];
 	
 	printf("Enter the elements: \n");
 	
 	for(i= 0; i< n; i++)
 	scanf("%d",&a[i]);
 	
-	ans= bin_to_dec(a, n);
+	arr[n]= *twos_complement(arr, a, n);
 	
-	printf("Decimal equivalent: %d",ans);
+	printf("two's complement: ");
+	
+	for(i= 0; i< n; i++)
+	printf("%d",arr[i]);
 }
