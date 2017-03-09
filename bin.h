@@ -27,18 +27,24 @@ int bin_to_dec(int a[], int n)
 
 
 // gives 1's complement of a binary number
-int * ones_complement(int arr[],int n)
+int * ones_complement(int a[],int array[],int n)
 {
 	int i;
+
 	for (i = 0; i < n; i++)
 	{
-		if (arr[i]==1)
+		a[i]=array[i];
+	}
+	
+	for (i = 0; i < n; i++)
+	{
+		if (array[i]==1)
 		{
-			arr[i]=0;
+			a[i]=0;
 		}
-		else if (arr[i]==0)
+		else if (array[i]==0)
 		{
-			arr[i]=1;
+			a[i]=1;
 		}
 		else
 		{
@@ -47,6 +53,37 @@ int * ones_complement(int arr[],int n)
 		}
 	}
 
-	return (arr); 
+	return (a); 
 
 }
+
+// decimal to binary conversion
+int * dec_to_bin(int array[],int nb,int n)
+{
+	if (n<0)
+	{
+		printf("Error: cannot pass negative number to function dec_to_bin()\n");
+		exit(0);
+	}
+
+	int i,j;
+	for (i = nb-1; i >=0 ; i--)
+	{
+		array[i]=n%2;
+		n=n/2;
+	}
+	if (n>=1)
+	{
+		printf("Error: insufficient size of destination array\n");
+		exit(0);
+	}
+
+	for (i = 0; i < nb; i++)
+	{
+		printf("%d",array[i] );
+	}
+	printf("\n");
+
+	return array;
+}
+
