@@ -117,7 +117,7 @@ void insertFloat_last(struct list* start, float f)
 //	 node->next=NULL;
 //}
 
-void insertFirst_int(struct list* start, int num)
+void insertInt_first(struct list* start, int num)
 {
     struct list *node;
     
@@ -129,7 +129,7 @@ void insertFirst_int(struct list* start, int num)
      
 }
 
-void insertFirst_char(struct list* start, char c)
+void insertChar_first(struct list* start, char c)
 {
     struct list *node;
      
@@ -140,7 +140,7 @@ void insertFirst_char(struct list* start, char c)
     node->cdata=c;
 }
 
-void insertFirst_float(struct list* start, float f)
+void insertFloat_first(struct list* start, float f)
 {
      struct list *node;
      
@@ -346,7 +346,7 @@ void insertInt_at(struct list* start, int index, int num)
 	else
 	{
 		if(index==0)
-		insertFirst_int(start, num);
+		insertInt_first(start, num);
 		
 		else if(index==c)
 		insertInt_last(start, num);
@@ -384,10 +384,10 @@ void insertChar_at(struct list* start, int index, char ch)
 	else
 	{
 		if(index==0)
-		insertFirst_int(start, ch);
+		insertChar_first(start, ch);
 		
 		else if(index==c)
-		insertInt_last(start, ch);
+		insertChar_last(start, ch);
 		
 		else
 		{
@@ -422,10 +422,10 @@ void insertFloat_at(struct list* start, int index, float f)
 	else
 	{
 		if(index==0)
-		insertFirst_int(start, f);
+		insertFloat_first(start, f);
 		
 		else if(index==c)
-		insertInt_last(start, f);
+		insertFloat_last(start, f);
 		
 		else
 		{
